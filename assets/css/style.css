@@ -122,7 +122,7 @@ button {
 }
 
 .sidebar__main-input:checked + .sidebar__main-button::before {
-	content: url(../img/highlight.svg);
+	content: url(/img/highlight.svg);
 	position: absolute;
 	max-height: 32px;
 	left: -24px;
