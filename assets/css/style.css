@@ -1,0 +1,164 @@
+/* Подключение шрифтов */
+
+@font-face {
+	font-family: "TT Lakes";
+	src: url("fonts/TTLakes/TTLakes-Bold.eot");
+	src: local("TT Lakes Bold"), local("TTLakes-Bold"),
+		url("fonts/TTLakes/TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
+		url("fonts/TTLakes/TTLakes-Bold.woff") format("woff"),
+		url("fonts/TTLakes/TTLakes-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TT Lakes";
+	src: url("fonts/TTLakes/TTLakes-Medium.eot");
+	src: local("TT Lakes Medium"), local("TTLakes-Medium"),
+		url("fonts/TTLakes/TTLakes-Medium.eot?#iefix") format("embedded-opentype"),
+		url("fonts/TTLakes/TTLakes-Medium.woff") format("woff"),
+		url("fonts/TTLakes/TTLakes-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TT Lakes";
+	src: url("fonts/TTLakes/TTLakes-Regular.eot");
+	src: local("TT Lakes Regular"), local("TTLakes-Regular"),
+		url("fonts/TTLakes/TLakes-Regular.eot?#iefix") format("embedded-opentype"),
+		url("fonts/TTLakes/TTLakes-Regular.woff") format("woff"),
+		url("fonts/TTLakes/TTLakes-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+/* Обнуление */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #1b1c21;
+}
+
+/* Body */
+
+html,
+body {
+	font-family: "TT Lakes";
+	font-size: 16px;
+	color: #1b1c21;
+}
+
+/* body {
+	
+} */
+button {
+	background: none;
+	cursor: pointer;
+}
+
+/* Убираем метки радиокнопок */
+
+.sidebar__main-input {
+	display: none;
+}
+
+.sidebar__footer-input {
+	display: none;
+}
+
+/* Sidebar */
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	padding-left: 24px;
+	width: 320px;
+	min-height: 100vh;
+	height: auto;
+	border: 2px solid #0001; /* удалить */
+	box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+		16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+/* Header */
+.sidebar__header {
+	display: flex;
+	align-items: center;
+	margin: 23px 24px 57px 0;
+}
+
+.sidebar__img {
+	margin-right: 83px;
+	margin-left: 16px;
+}
+
+/* Main */
+.sidebar__main {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	margin-bottom: auto;
+}
+
+.sidebar__main-input:checked + .sidebar__main-button {
+	color: #7e7e82;
+}
+
+.sidebar__main-button {
+	position: relative;
+}
+
+.sidebar__main-input:checked + .sidebar__main-button::before {
+	content: url(/assets/img/highlight.svg);
+	position: absolute;
+	max-height: 32px;
+	left: -24px;
+	top: -4px;
+}
+
+/* Footer */
+
+.sidebar__footer {
+	margin-top: 16px;
+}
+
+.sidebar__footer-buttons {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.sidebar__footer-email {
+	margin-top: 16px;
+	margin-bottom: 12px;
+}
+
+.sidebar__footer-phone {
+	font-size: 24px;
+	line-height: 32px;
+	margin-bottom: 40px;
+	font-weight: 900;
+}
+
+.sidebar__footer-lang {
+	display: flex;
+	gap: 7px;
+	padding-bottom: 16px;
+}
+
+.sidebar__footer-input:checked + .sidebar__footer-button {
+	color: #7e7e82;
+}
